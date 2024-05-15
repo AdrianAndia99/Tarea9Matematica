@@ -32,7 +32,7 @@ public class CodigoMRUV : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-    void ToggleMovement()
+    public void ToggleMovement()
     {
         if (isMoving)
         {

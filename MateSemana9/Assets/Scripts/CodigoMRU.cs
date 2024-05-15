@@ -6,7 +6,6 @@ public class CodigoMRU : MonoBehaviour
     public float speed;
     private Rigidbody rb;
     private Vector2 initialPosition;
-    private bool isMoving = false;
 
     private void Start()
     {
@@ -27,19 +26,5 @@ public class CodigoMRU : MonoBehaviour
             Debug.Log("Jugador1 llego primero");
             Time.timeScale = 0f;
         }
-    }
-
-    private void ToggleMovement()
-    {
-        if (isMoving)
-        {
-            rb.velocity = Vector2.zero;
-            transform.position = initialPosition;
-        }
-        else
-        {
-            rb.velocity = new Vector2(speed, 0);
-        }
-        isMoving = !isMoving;
     }
 }
